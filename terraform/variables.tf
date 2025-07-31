@@ -45,6 +45,6 @@ variable "metadata" {
   type = map(any)
   default = {
     serial-port-enable = 1
-    ssh-keys = "ubuntu:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEHRcJFPPYCyIbTvpZaN0Lm7YDV0CupCsj1RBJ+KMTGD mspitsin@mspitsin"
+    ssh-keys = "centos:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEHRcJFPPYCyIbTvpZaN0Lm7YDV0CupCsj1RBJ+KMTGD mspitsin@mspitsin"
   }
 }

@@ -48,16 +48,15 @@ resource "yandex_compute_instance" "for_each" {
     }
   }
 
-  metadata = {
-    serial-port-enable = 1
-    ssh-keys = local.ssh_keys
-  }
-
+  metadata = var.metadata
   scheduling_policy { preemptible = true }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.develop.id
     nat       = true
+    security_group_ids = [
+        yandex_vpc_security_group.example.id
+    ]
   }
   allow_stopping_for_update = true
 }
