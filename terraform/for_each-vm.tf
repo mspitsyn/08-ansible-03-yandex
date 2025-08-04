@@ -11,7 +11,7 @@ variable "each_vm" {
       fraction = number
     }))
     default = [ {
-      vm_name = "clickhouse-01"
+      vm_name = "clickhouse"
       cpu = 4
       disk_volume = 2
       fraction = 5
